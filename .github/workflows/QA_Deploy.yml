@@ -5,12 +5,8 @@ name: Deploy PR on QA branch
 on:
     # The workflow will run whenever an event happens on a pull request
     push:
-      # The events are that a PR is opened, edited, reopened or when a commit is pushed
-      # to a branch that has an existing pull request
-      types: [opened, edited, reopened, synchronize]
-      # The branches filter allows to specify that this workflow should only
       # run if the branch name is "QA". This way we prevent this workflow
-      # from running when PRs are opened on other branches
+      # from running when PRs are Merged on other branches
       branches: [ QA ]
       # We only care about changes to the force-app directory, which is the
       # root directory of the sfdx project. This prevents the job from running
